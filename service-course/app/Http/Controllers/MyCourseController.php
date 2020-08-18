@@ -54,7 +54,6 @@ class MyCourseController extends Controller
 
         $userId = $request->input('user_id');
         $user = getUser($userId);
-
         if ($user['status'] === 'error') {
             return response()->json([
                 'status' => $user['status'],
